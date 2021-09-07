@@ -17,7 +17,9 @@
             app:enterAnim="@android:anim/fade_in"
             app:exitAnim="@android:anim/fade_out"
             app:popEnterAnim="@android:anim/slide_out_right"
-            app:popExitAnim="@android:anim/slide_in_left"/>
+            app:popExitAnim="@android:anim/slide_in_left" />
+        <!-- https://stackoverflow.com/questions/56285197/what-is-the-difference-between-enteranim-popenteranim-exitanim-popexitanim -->
+        <!-- https://stackoverflow.com/questions/62923422/missing-slide-in-right-and-slide-out-left-animations-in-android -->
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
