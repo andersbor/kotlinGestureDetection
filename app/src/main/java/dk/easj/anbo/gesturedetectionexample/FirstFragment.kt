@@ -20,7 +20,7 @@ class FirstFragment : Fragment() {
     ): View {
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
 
-        mDetector = GestureDetectorCompat(activity, MyGestureListener())
+        mDetector = GestureDetectorCompat(requireContext(), MyGestureListener())
         val rootView: ConstraintLayout = binding.root
         rootView.setOnTouchListener { view, motionEvent ->
             mDetector.onTouchEvent(motionEvent)
@@ -65,6 +65,7 @@ class FirstFragment : Fragment() {
             doIt(ev1, ev2)
             return super.onFling(ev1, ev2, velocityX, velocityY)
         }
+
 
         private fun doIt(ev1: MotionEvent, ev2: MotionEvent) {
             val xDiff = ev1.x - ev2.x

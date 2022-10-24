@@ -19,7 +19,7 @@ class SecondFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
-        mDetector = GestureDetectorCompat(activity, AnotherGestureListener())
+        mDetector = GestureDetectorCompat(requireContext(), AnotherGestureListener())
         val rootView: ConstraintLayout = binding.root
         rootView.setOnTouchListener { view, motionEvent ->
             mDetector.onTouchEvent(motionEvent)
@@ -27,7 +27,6 @@ class SecondFragment : Fragment() {
             true
         }
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
